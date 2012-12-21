@@ -11,7 +11,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
-import org.joda.time.format.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.HttpHeaders;
@@ -260,7 +260,7 @@ public class PatientLogController {
     }
 
 	void addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("patientLog_appointmentdate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("patientLog_appointmentdate_date_format", org.joda.time.format.DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
 
 	void populateEditForm(Model uiModel, PatientLog patientLog) {
