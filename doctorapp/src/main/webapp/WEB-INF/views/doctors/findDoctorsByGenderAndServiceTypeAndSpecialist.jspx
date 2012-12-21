@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByGenderAndServiceTypeAndSpecialist" id="ff_com_xtreme_doctorapp_domain_Doctor" path="/doctors" z="BQ+offTownyHsgoFjpbRpxObscc=">
+        <field:select disableFormBinding="true" field="gender" id="f_com_xtreme_doctorapp_domain_Doctor_gender" items="${genders}" path="/genders" required="true" z="IxGlsb0GiUX3Zc7pIJfaW6FA8Qs="/>
+        <field:select disableFormBinding="true" field="serviceType" id="f_com_xtreme_doctorapp_domain_Doctor_serviceType" items="${servicetypes}" path="/servicetypes" required="true" z="lTellca5kwibt5jK9cx/8GqbfH0="/>
+        <field:select disableFormBinding="true" field="specialist" id="f_com_xtreme_doctorapp_domain_Doctor_specialist" itemValue="id" items="${specialists}" path="/specialists" required="true" z="tRxPd5qMDYrGvLj7m6/WXXv/o8k="/>
+    </form:find>
+</div>

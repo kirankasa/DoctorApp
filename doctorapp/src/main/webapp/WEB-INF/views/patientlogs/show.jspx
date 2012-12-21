@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show delete="false" id="ps_com_xtreme_doctorapp_domain_PatientLog" object="${patientlog}" path="/patientlogs" z="Qovr7q8M7c6S6xwyVp1fHvOc2Mc=">
+        <field:display field="doctor" id="s_com_xtreme_doctorapp_domain_PatientLog_doctor" object="${patientlog}" z="aSCIZR6CMh2lyyAcS+6ngIP1uIQ="/>
+        <field:display field="status" id="s_com_xtreme_doctorapp_domain_PatientLog_status" object="${patientlog}" z="eS1fZX7drWlQhgg3Hy7mOE1ZgvY="/>
+        <field:display field="email" id="s_com_xtreme_doctorapp_domain_PatientLog_email" object="${patientlog}" z="ZePc1eFfn2OQc+OAK1LwGvfekso="/>
+        <field:display date="true" dateTimePattern="${patientLog_appointmentdate_date_format}" field="appointmentDate" id="s_com_xtreme_doctorapp_domain_PatientLog_appointmentDate" object="${patientlog}" z="g186wmzkGEfyys588yqebxtZsSc="/>
+        <field:display field="name" id="s_com_xtreme_doctorapp_domain_PatientLog_name" object="${patientlog}" z="jI3U4jtBIoTAUfaZhtkPsJSwI8k="/>
+        <field:display field="appointmentTime" id="s_com_xtreme_doctorapp_domain_PatientLog_appointmentTime" object="${patientlog}" z="znli5ZrgQEZWdnrCxuhRglOD/EE="/>
+    </page:show>
+</div>

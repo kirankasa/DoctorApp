@@ -1,0 +1,50 @@
+project --topLevelPackage com.xtreme.doctorapp
+jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE 
+entity jpa --class ~.domain.Doctor --testAutomatically 
+field string --fieldName name --notNull 
+field string --fieldName qualification --notNull 
+field string --fieldName mobileno --notNull 
+field string --fieldName email --notNull 
+enum type --class ~.domain.Gender
+enum constant --name MALE
+enum constant --name FEMALE
+enum constant --name NOTPREFER
+field enum --type ~.domain.Gender --class ~.domain.Doctor --fieldName gender
+entity jpa --class ~.domain.Specialist --testAutomatically 
+field string --fieldName name --notNull 
+field reference --class ~.domain.Doctor --type ~.domain.Specialist --fieldName specialist
+web mvc setup
+web mvc all --package ~.web
+web mvc json all
+json all
+web mvc json all
+entity jpa --class ~.domain.PatientLog --testAutomatically 
+field reference --fieldName doctor --type ~.domain.Doctor
+field string --fieldName status
+web mvc json all
+json all
+web mvc json all
+web mvc all --package com.xtreme.doctorapp.web
+web mvc json all
+field string --fieldName email  --class ~.domain.PatientLog 
+email sender setup --hostServer smtp.sendgrid.net 
+email template setup 
+field email template 
+email sender setup --hostServer email.host=10.44.1.6
+email sender setup --hostServer smtp.sendgrid.net --username kiranreddykasa --password kazhuthey --port 25
+finder list --class ~.domain.Doctor
+finder add --finderName findDoctorsByNameEquals --class ~.domain.Doctor
+web mvc finder all
+finder add --finderName findPatientLogsByDoctor --class ~.domain.PatientLog
+web mvc finder all
+web mvc controller --class ~.VerifyController --preferredMapping verify
+field string --fieldName city --class ~.domain.Doctor
+field string --fieldName stateName --class ~.domain.Doctor
+field string --fieldName pincode --class ~.domain.Doctor
+enum type --class ~.domain.ServiceType
+enum constant --name HOME
+enum constant --name CLINIC
+field enum --fieldName serviceType --class ~.domain.Doctor --type ~.domain.ServiceType
+web mvc all --package ~.web
+json all
+web mvc json all

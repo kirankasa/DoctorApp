@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="doctors/list">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/list.jspx"/>
+    </definition>
+<definition extends="default" name="doctors/show">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/show.jspx"/>
+    </definition>
+<definition extends="default" name="doctors/create">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/create.jspx"/>
+    </definition>
+<definition extends="default" name="doctors/update">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/update.jspx"/>
+    </definition>
+<definition extends="default" name="doctors/findDoctorsByNameEquals">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/findDoctorsByNameEquals.jspx"/>
+    </definition>
+<definition extends="default" name="doctors/findDoctorsByGenderAndServiceTypeAndSpecialist">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/findDoctorsByGenderAndServiceTypeAndSpecialist.jspx"/>
+    </definition>
+<definition extends="default" name="doctors/findDoctorsByGenderAndServiceTypeAndSpecialistAndPincode">
+        <put-attribute name="body" value="/WEB-INF/views/doctors/findDoctorsByGenderAndServiceTypeAndSpecialistAndPincode.jspx"/>
+    </definition>
+</tiles-definitions>

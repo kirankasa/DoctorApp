@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_xtreme_doctorapp_domain_PatientLog" items="${patientlogs}" z="Kifghh7OcLD0r4yfp9+o7PNavfs=">
+        <table:table data="${patientlogs}" delete="false" id="l_com_xtreme_doctorapp_domain_PatientLog" path="/patientlogs" z="r4MymqkKaz5L3sVWtmDWlF1DFL4=">
+            <table:column id="c_com_xtreme_doctorapp_domain_PatientLog_doctor" property="doctor" z="lMo24NPcJi4a1El+CuHGw+cMr/s="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_PatientLog_status" property="status" z="5B5PGyd2PK3dYu9b8D4IEPln4iM="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_PatientLog_email" property="email" z="vU50sQEZcHvjDHyDICxajsSYX7I="/>
+            <table:column date="true" dateTimePattern="${patientLog_appointmentdate_date_format}" id="c_com_xtreme_doctorapp_domain_PatientLog_appointmentDate" property="appointmentDate" z="1p0jljua0Jmjgjg2er6/5oAJrQI="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_PatientLog_name" property="name" z="b3Bekk77rXciDW15HZp5CtX6Y8I="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_PatientLog_appointmentTime" property="appointmentTime" z="tlX1UYq2IgcK7pr/aJBneuRizP0="/>
+        </table:table>
+    </page:list>
+</div>

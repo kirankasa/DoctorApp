@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_xtreme_doctorapp_domain_Doctor" modelAttribute="doctor" path="/doctors" versionField="Version" z="24vzKUjxqijt3Gspl6qH/tHlywc=">
+        <field:input field="name" id="c_com_xtreme_doctorapp_domain_Doctor_name" required="true" z="YgTcQ70ur5nDSsxBzT37iBR7LGc="/>
+        <field:input field="qualification" id="c_com_xtreme_doctorapp_domain_Doctor_qualification" required="true" z="t3ShayrzSgWJCZV+ofL/eMpdAa0="/>
+        <field:input field="mobileno" id="c_com_xtreme_doctorapp_domain_Doctor_mobileno" required="true" z="x1L5giIr0gKdq0EyySfXOoiONuE="/>
+        <field:input field="email" id="c_com_xtreme_doctorapp_domain_Doctor_email" required="true" validationMessageCode="field_invalid_email" z="JiqSSiiKaZpUjNu59WqtPVdTVwU="/>
+        <field:select field="gender" id="c_com_xtreme_doctorapp_domain_Doctor_gender" items="${genders}" path="genders" z="zLAn1HNVzIiYBlRpWC6bKkMh/4o="/>
+        <field:select field="specialist" id="c_com_xtreme_doctorapp_domain_Doctor_specialist" itemValue="id" items="${specialists}" path="/specialists" z="GvubyRFsJ2MxbOSZdg/d6lLTL60="/>
+        <field:input field="area" id="c_com_xtreme_doctorapp_domain_Doctor_area" z="m/S/xLn1DtzNK/h7zAgri6n02/M="/>
+        <field:input field="city" id="c_com_xtreme_doctorapp_domain_Doctor_city" z="5UgvKl2lHDkLcT8JvnDnAA4itEs="/>
+        <field:input field="stateName" id="c_com_xtreme_doctorapp_domain_Doctor_stateName" z="OZXIjwjFigrdT5r8pjff+TquUrY="/>
+        <field:input field="pincode" id="c_com_xtreme_doctorapp_domain_Doctor_pincode" z="Wva4Va7C+fJSQeTIty8fvtPxY6c="/>
+        <field:select field="serviceType" id="c_com_xtreme_doctorapp_domain_Doctor_serviceType" items="${servicetypes}" path="servicetypes" z="qyKUOMxfAcOFmUbJUvSbCRTU5K8="/>
+       
+    </form:update>
+</div>

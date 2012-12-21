@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="patientlogs/list">
+        <put-attribute name="body" value="/WEB-INF/views/patientlogs/list.jspx"/>
+    </definition>
+<definition extends="default" name="patientlogs/show">
+        <put-attribute name="body" value="/WEB-INF/views/patientlogs/show.jspx"/>
+    </definition>
+<definition extends="default" name="patientlogs/create">
+        <put-attribute name="body" value="/WEB-INF/views/patientlogs/create.jspx"/>
+    </definition>
+<definition extends="default" name="patientlogs/update">
+        <put-attribute name="body" value="/WEB-INF/views/patientlogs/update.jspx"/>
+    </definition>
+<definition extends="default" name="patientlogs/findPatientLogsByDoctor">
+        <put-attribute name="body" value="/WEB-INF/views/patientlogs/findPatientLogsByDoctor.jspx"/>
+    </definition>
+<definition extends="default" name="patientlogs/findPatientLogsByAppointmentDateEqualsAndDoctor">
+        <put-attribute name="body" value="/WEB-INF/views/patientlogs/findPatientLogsByAppointmentDateEqualsAndDoctor.jspx"/>
+    </definition>
+</tiles-definitions>

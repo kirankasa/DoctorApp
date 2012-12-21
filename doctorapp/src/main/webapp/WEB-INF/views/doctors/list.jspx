@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_xtreme_doctorapp_domain_Doctor" items="${doctors}" z="V2XNvHAdNtKkp4RRb22FvTmFTVY=">
+        <table:table data="${doctors}" delete="false" id="l_com_xtreme_doctorapp_domain_Doctor" path="/doctors" z="LiRnzM6B04fqBvEQwN3OqTcMJJM=">
+            <table:column id="c_com_xtreme_doctorapp_domain_Doctor_name" property="name" z="5JtV3FglW4ky9Q4yLwq77IkDgvI="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_Doctor_qualification" property="qualification" z="h+N469nClYRmasvBrYzSdXDjNHQ="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_Doctor_mobileno" property="mobileno" z="+V3CCwJZVpauqVWdZWzeLU1KTRc="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_Doctor_email" property="email" z="oZ3dUtefdErKcLgq+kBXnf7oXnA="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_Doctor_gender" property="gender" z="p8d8pOJVcsARypSz5ldg+9eKQgg="/>
+            <table:column id="c_com_xtreme_doctorapp_domain_Doctor_specialist" property="specialist" z="794U3EtOKAHx66hcIFlkjAscLH8="/>
+        </table:table>
+    </page:list>
+</div>

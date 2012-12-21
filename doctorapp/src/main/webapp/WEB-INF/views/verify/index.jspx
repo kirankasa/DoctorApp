@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:spring="http://www.springframework.org/tags" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<SCRIPT type="text/javascript">
+		<![CDATA[
+
+		function onVerify(form) {
+
+			var patientList = "";
+			var chk = document.getElementsByName("patientid");
+			for ( var i = 0; i < chk.length; i++) {
+				if (chk[i].checked) {
+					patientList = patientList + chk[i].value + ":";
+				}
+			}
+			if (patientList == "") {
+				alert("Atleast one record should be selected");
+				return;
+			} else {
+				//alert(patientList);
+				document.form.action ="/verify/confirm/"+patientList;
+				document.form.submit();
+			}
+		}
+
+		]]>
+	</SCRIPT>
+
+	<h1>Verification</h1>
+	<FORM name="form"  method="post">
+		<c:choose>
+			<c:when test="${not empty patientlogs}">
+				<TABLE>
+					<TR>
+						<TH></TH>
+						<TH>Patient</TH>
+						<TH>Doctor</TH>
+						<TH>Email</TH>
+						<TH>Status</TH>
+					</TR>
+
+					<c:forEach items="${patientlogs}" var="patientLog">
+
+						<tr>
+							<td><input name="patientid" type="checkbox"
+								value="${patientLog.id}" /></td>
+							<td><c:out value="${patientLog.name}" /></td>
+							<td><c:out value="${patientLog.doctor.name}" /></td>
+							<td><c:out value="${patientLog.email}" /></td>
+							<td><c:out value="${patientLog.status}" /></td>
+						</tr>
+					</c:forEach>
+				</TABLE>
+
+				<table>
+					<tr align="center">
+						<td colspan="4"><INPUT type="button" value="Verify"
+							onclick="onVerify(this)" /></td>
+					</tr>
+				</table>
+
+			</c:when>
+			<c:otherwise>
+				<spring:message arguments="Patient Log" code="entity_not_found" />
+			</c:otherwise>
+		</c:choose>
+
+	</FORM>
+
+</div>

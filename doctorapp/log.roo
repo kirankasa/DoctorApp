@@ -1,0 +1,115 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-27 00:29:58
+project --topLevelPackage com.xtreme.doctorapp
+jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE 
+entity jpa --class ~.domain.Doctor --testAutomatically 
+field string --fieldName name --notNull 
+field string --fieldName qualification --notNull 
+field string --fieldName mobileno --notNull 
+field string --fieldName email --notNull 
+enum type --class ~.domain.Gender
+enum constant --name MALE
+enum constant --name FEMALE
+enum constant --name NOTPREFER
+field enum --type ~.domain.Gender --class ~.domain.Doctor --fieldName gender
+entity jpa --class ~.domain.Specialist --testAutomatically 
+field string --fieldName name --notNull 
+field reference --class ~.domain.Doctor --type ~.domain.Specialist --fieldName specialist
+web mvc setup
+web mvc all --package ~.web
+web mvc json all
+json all
+web mvc json all
+entity jpa --class ~.domain.PatientLog --testAutomatically 
+field reference --fieldName doctor --type ~.domain.Doctor
+field string --fieldName status
+web mvc json all
+json all
+web mvc json all
+web mvc all --package com.xtreme.doctorapp.web
+web mvc json all
+field string --fieldName email  --class ~.domain.PatientLog 
+email sender setup --hostServer smtp.sendgrid.net 
+email template setup 
+field email template 
+email sender setup --hostServer email.host=10.44.1.6
+email sender setup --hostServer smtp.sendgrid.net --username kiranreddykasa --password kazhuthey --port 25
+finder list --class ~.domain.Doctor
+finder add --finderName findDoctorsByNameEquals --class ~.domain.Doctor
+web mvc finder all
+finder add --finderName findPatientLogsByDoctor --class ~.domain.PatientLog
+web mvc finder all
+web mvc controller --class ~.VerifyController --preferredMapping verify
+field string --fieldName city --class ~.domain.Doctor
+field string --fieldName stateName --class ~.domain.Doctor
+field string --fieldName pincode --class ~.domain.Doctor
+enum type --class ~.domain.ServiceType
+enum constant --name HOME
+enum constant --name CLINIC
+field enum --fieldName serviceType --class ~.domain.Doctor --type ~.domain.ServiceType
+web mvc all --package ~.web
+json all
+web mvc json all
+// script --file Doctor.roo
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-27 00:30:39
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-27 00:48:14
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-27 01:05:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-29 21:54:20
+field date --fieldName appointmentDate --class ~.domain.PatientLog --type java.util.Date
+field string --fieldName name --notNull
+backup
+security setup
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-30 01:41:37
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-05 00:41:55
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-05 02:33:25
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-05 02:49:13
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-05 02:50:00
+backup
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-05 02:55:39
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-05 22:09:27
+finder list --class ~.domain.PatientLog --depth 2
+finder list --class ~.domain.PatientLog --depth 2 --filter Doctor
+finder list --class ~.domain.PatientLog --depth 2 --filter Doctor|Appoint
+finder list --class ~.domain.PatientLog --depth 2 --filter Doctor|AppointmentDate
+finder list --class ~.domain.PatientLog --depth 2 --filter Doctor,AppointmentDate
+finder list --class ~.domain.PatientLog --depth 2 --filter Doctor,AppointmentDate,equ
+finder list --class ~.domain.PatientLog --depth 2 --filter AppointmentDate,equ
+finder list --class ~.domain.PatientLog  --filter AppointmentDate,equ
+finder list --class ~.domain.PatientLog  
+finder list --class ~.domain.PatientLog --depth 2 --filter findPatientLogsByAppointmentDateEquals,Doctor
+finder list --class ~.domain.PatientLog --depth 2 --filter findPatientLogsByAppointmentDateEquals
+finder add --finderName findPatientLogsByAppointmentDateEqualsAndDoctor
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-05 22:33:15
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-05 23:06:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-05 23:49:04
+finder list --class ~.domain.Doctor 
+finder list --class ~.domain.Doctor --depth 2 --filter findDoctorsByGender
+finder list --class ~.domain.Doctor --depth 3 --filter findDoctorsByGenderAndServiceType
+// [failed] finder list --class ~.domain.Doctor --depth 4 --filter findDoctorsByGenderAndServiceTypeAndSpecialist
+finder add --finderName findDoctorsByGenderAndServiceTypeAndSpecialist
+backup
+backup
+field email template 
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 20:43:13
+backup
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-06 20:52:30
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-06 23:26:37
+backup
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-06 23:29:09
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-07 01:42:51
+json all
+web mvc json all
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-07 01:47:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-12-09 00:50:55
+// [failed] field string --fieldName time --class ~.domain.PatientLog
+field string --fieldName appointmentTime --class ~.domain.PatientLog
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-12-09 01:08:37

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show delete="false" id="ps_com_xtreme_doctorapp_domain_Doctor" object="${doctor}" path="/doctors" z="79eUfbwqGRNKcaIchhPPzwkFa6s=">
+        <field:display field="name" id="s_com_xtreme_doctorapp_domain_Doctor_name" object="${doctor}" z="ctNXrud5Ei9yECj1mzCrYi5u1+g="/>
+        <field:display field="qualification" id="s_com_xtreme_doctorapp_domain_Doctor_qualification" object="${doctor}" z="SwWfm5cUV5XFclTpco0sasVHHXg="/>
+        <field:display field="mobileno" id="s_com_xtreme_doctorapp_domain_Doctor_mobileno" object="${doctor}" z="znGHGgfgaWVg4PW2q7BzXmzaZIc="/>
+        <field:display field="email" id="s_com_xtreme_doctorapp_domain_Doctor_email" object="${doctor}" z="noapY/tEQvXjKE0zDg6Hay48meQ="/>
+        <field:display field="gender" id="s_com_xtreme_doctorapp_domain_Doctor_gender" object="${doctor}" z="ftd5V/7PdTm6K3EmG9kItmbNN30="/>
+        <field:display field="specialist" id="s_com_xtreme_doctorapp_domain_Doctor_specialist" object="${doctor}" z="rBfmcT0ehAzoZiYboQxPLrKnBSk="/>
+        <field:display field="area" id="s_com_xtreme_doctorapp_domain_Doctor_area" object="${doctor}" z="4KyoRiptE4bpB4rjN0IYwFthAYo="/>
+        <field:display field="city" id="s_com_xtreme_doctorapp_domain_Doctor_city" object="${doctor}" z="H7+9FO3Xp0VNQ9En9m4s+rBOKjE="/>
+        <field:display field="stateName" id="s_com_xtreme_doctorapp_domain_Doctor_stateName" object="${doctor}" z="R3YN2PGeXIPzhAIxi33m9pwnCR4="/>
+        <field:display field="pincode" id="s_com_xtreme_doctorapp_domain_Doctor_pincode" object="${doctor}" z="jpR2w+DLw7622GrsTKg0CvM3pqM="/>
+        <field:display field="serviceType" id="s_com_xtreme_doctorapp_domain_Doctor_serviceType" object="${doctor}" z="ARo2tMCfrs45BPrkAVhJdLC8Y54="/>
+    </page:show>
+</div>

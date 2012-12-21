@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_xtreme_doctorapp_domain_PatientLog" modelAttribute="patientLog" path="/patientlogs" versionField="Version" z="wPfk8CbgBVq5c0tQC1xVJmHsasY=">
+        <field:input field="name" id="c_com_xtreme_doctorapp_domain_PatientLog_name" required="true" z="3TLqi17k7oXVHgpeX+nfu2QRfxI="/>
+        <field:select field="doctor" id="c_com_xtreme_doctorapp_domain_PatientLog_doctor" itemValue="id" items="${doctors}" path="/doctors" z="vqAs+OCoqXOD2izYUzuXG1k/cOA="/>
+        <field:input field="status" id="c_com_xtreme_doctorapp_domain_PatientLog_status" z="VLQU5+TnkIGgsEdgj+lptMVIogE="/>
+        <field:input field="email" id="c_com_xtreme_doctorapp_domain_PatientLog_email" validationMessageCode="field_invalid_email" z="F0KH4Wgt+j1t/OJEdOw9aaI9ZMQ="/>
+        <field:datetime dateTimePattern="${patientLog_appointmentdate_date_format}" field="appointmentDate" id="c_com_xtreme_doctorapp_domain_PatientLog_appointmentDate" z="L0P8nPGBLnTWF0yiZRvLAqhBRPw="/>
+        <field:input field="appointmentTime" id="c_com_xtreme_doctorapp_domain_PatientLog_appointmentTime" z="/jnAxgcmUt2aue87cP9xMvJis94="/>
+    </form:update>
+</div>

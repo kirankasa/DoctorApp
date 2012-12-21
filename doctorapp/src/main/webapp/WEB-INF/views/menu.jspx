@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <sec:authorize ifAllGranted="ROLE_ADMIN">
+            <menu:category id="c_specialist" z="DIyeUX9Y5c5TvQjlSDpnpQoLMug=">
+                <menu:item id="i_specialist_new" messageCode="global_menu_new" url="/specialists?form" z="dnRQ8Py6KLv+Tj2jKMcPHruGoUo="/>
+                <menu:item id="i_specialist_list" messageCode="global_menu_list" url="/specialists?page=1&amp;size=${empty param.size ? 10 : param.size}" z="L+CZgzfybREff9/m93ZBHWglyuk="/>
+            </menu:category>
+            <menu:category id="c_doctor" z="VN2p5Aytuw4KpwEZ1rOV1dx/Zqo=">
+                <menu:item id="i_doctor_new" messageCode="global_menu_new" url="/doctors?form" z="H2mXVD1wm4YfgSXqE6cZxN76eww="/>
+                <menu:item id="i_doctor_list" messageCode="global_menu_list" url="/doctors?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nlQosh9IBqyF4rLMv+ifW1gxGeE="/>
+                <menu:item id="fi_doctor_genderandservicetypeandspecialist" messageCode="global_menu_find" url="/doctors?find=ByGenderAndServiceTypeAndSpecialist&amp;form" z="Cf9xJVVsG9qTRtXSBGlTUyEu7yI="/>
+                <menu:item id="fi_doctor_genderandservicetypeandspecialistandpincode" messageCode="global_menu_find" url="/doctors?find=ByGenderAndServiceTypeAndSpecialistAndPincode&amp;form" z="tpxo4EJ+FYt3JlZRv1vJrgtlhPE="/>
+                <menu:item id="fi_doctor_nameequals" messageCode="global_menu_find" url="/doctors?find=ByNameEquals&amp;form" z="TQ8jZi54U0S6iJPoUnNlt8utIaI="/>
+            </menu:category>
+            <menu:category id="c_patientlog" z="Tk9hsj1eWqIIZkS8l5zVnsR0IiI=">
+                <menu:item id="i_patientlog_new" messageCode="global_menu_new" url="/patientlogs?form" z="+/xPLdduTSygyYDSjy5bzVZLqKE="/>
+                <menu:item id="fi_patientlog_appointmentdateequalsanddoctor" messageCode="global_menu_find" url="/patientlogs?find=ByAppointmentDateEqualsAndDoctor&amp;form" z="pJXS67Pn9xuwcp3+VX+enK8xW4I="/>
+                <menu:item id="fi_patientlog_doctor" messageCode="global_menu_find" url="/patientlogs?find=ByDoctor&amp;form" z="aURjvboO+X0dsOCjHuDxOuaExrw="/>
+            </menu:category>
+        </sec:authorize>
+        <sec:authorize ifAllGranted="ROLE_USER">
+            <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+                <menu:item id="i_controller__verifyindex_id" messageCode="global_generic" url="/verify/index" z="rfxd4xP+eMQXGtmJRfw1MvwI34M="/>
+                <menu:item id="i_patientlog_list" messageCode="global_menu_list" url="/patientlogs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fPm0dxhFpf7DalBp94MWKRna9xU="/>
+            </menu:category>
+        </sec:authorize>
+    </menu:menu>
+</div>
